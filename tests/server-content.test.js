@@ -32,4 +32,4 @@ describe("Test the test path", () => {
     const response = await request(app).get("/test");
     expect(response.text).toBe("Hello World!");
   });
-});
+})
