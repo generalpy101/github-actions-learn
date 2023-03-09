@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "server-watch": "node server.js",
-    "watch": "run-p tailwind-watch server-watch",
+    "server": "node server.js",
+    "watch": "run-p tailwind-watch server",
     "tailwind-build": "npx tailwindcss -i ./public/css/index-input.css -o ./public/css/index.css",
     "tailwind-watch": "npx tailwindcss -i ./public/css/index-input.css -o ./public/css/index.css --watch"
   },
