@@ -4,7 +4,6 @@ const app = require("../src/app.js");
 describe("Test the root path", () => {
   test("Response should contain base html", async () => {
     const response = await request(app).get("/");
-    console.log(response);
     expect(response.text).toBe(
       `<!DOCTYPE html>
 <html lang="en">
