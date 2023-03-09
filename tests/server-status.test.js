@@ -11,6 +11,6 @@ describe("Test the root path", () => {
 describe("Test the error path", () => {
   test("Response code should be 404", async () => {
     const response = await request(app).get("/error");
-    expect(response.statusCode).toBe(200);
+    expect(response.statusCode).toBe(404);
   });
 })
