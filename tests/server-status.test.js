@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../src/app.js");
+const { app } = require("../functions/app.js");
 
 describe("Test the root path", () => {
   test("Response code should be 200", async () => {
@@ -13,4 +13,4 @@ describe("Test the error path", () => {
     const response = await request(app).get("/error");
     expect(response.statusCode).toBe(404);
   });
-})
+});
