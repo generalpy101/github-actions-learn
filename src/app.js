@@ -2,7 +2,6 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const cors = require("cors");
-const functions = require("firebase-functions");
 
 const app = express();
 
@@ -11,7 +10,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "..", "public")));
 // Middlewares end
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
@@ -25,4 +23,3 @@ app.get("/error", (req, res) => {
 });
 
 exports.app = app;
-exports.app_firebase = functions.https.onRequest(app);

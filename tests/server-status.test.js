@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { app } = require("../functions/app.js");
+const { app } = require("../src/app.js");
 
 describe("Test the root path", () => {
   test("Response code should be 200", async () => {
