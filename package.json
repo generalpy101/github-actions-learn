@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose",
     "server": "node server.js",
-    "build": "tailwind-build",
+    "build": "npm run tailwind-build",
     "watch": "run-p tailwind-watch server",
     "tailwind-build": "npx tailwindcss -i ./public/css/index-input.css -o ./public/css/index.css",
     "tailwind-watch": "npx tailwindcss -i ./public/css/index-input.css -o ./public/css/index.css --watch"
