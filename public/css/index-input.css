@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-selector-div {
+    /* background: #95A5A6; */
+    display: inline-block;
+    padding: 3px 3px;
+    border-radius: 20px;
+    position: relative;
+    border: 2px solid #95a5a6;
+}
+
+.theme-selector-div label {
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    color: #95a5a6;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-align: center;
+    padding: 3px 3px;
+    font-size: 1rem;
+    /* cursor: pointer; */
+}
+
+.theme-selector-div input {
+    /* display: none; */
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.theme-selector-div span {
+    height: 1.5rem;
+    width: 1.5rem;
+    line-height: 1.9rem;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.24rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-selector-div input[value="dark"]:checked ~ span {
+    background: #eeeee9;
+    left: 0.25rem;
+    color: #a9a5a5;
+}
+
+.theme-selector-div input[value="light"]:checked ~ span {
+    background: #f4ce31;
+    left: 4.03rem;
+}
+.theme-selector-div input[value="system"]:checked ~ span {
+    /* background: #e1d7d7; */
+    background: linear-gradient(to right, #eeeee9 50%, #f4ce31 50%);
+    left: 2.16rem;
+}
+
+.theme-selector-div input[value="dark"]:checked + label {
+    color: #222;
+}
+
+.theme-selector-div input[value="light"]:checked + label {
+    color: #222;
+}
+
+.theme-selector-div input[value="system"]:checked + label {
+    color: #222;
+}
